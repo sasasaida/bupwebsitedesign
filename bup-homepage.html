@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bangladesh University of Professionals — BUP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div id="top-bar">
+  <div class="top-bar-inner">
+    <span class="top-bar-label">Latest</span>
+    <div class="top-bar-ticker">
+      <div class="ticker-track">
+        <span class="ticker-item"><span class="ticker-dot"></span>Spring Semester 2025 Final Examination Schedule Published — Download Now</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Admission Open: Master of Business Administration (MBA) Evening Program</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>International Conference on Digital Transformation — 15 April 2025 at BUP Auditorium</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>National Debate Competition Registration Deadline: 10 April 2025</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Spring Semester 2025 Final Examination Schedule Published — Download Now</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Admission Open: Master of Business Administration (MBA) Evening Program</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>International Conference on Digital Transformation — 15 April 2025 at BUP Auditorium</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>National Debate Competition Registration Deadline: 10 April 2025</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <!-- Left -->
+    <div class="nav-left">
+      <div class="nav-item">
+        <a href="#" class="nav-link">About</a>
+      </div>
+      <div class="nav-item">
+        <a href="#" class="nav-link">Academics
+          <svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="#">Programs</a>
+          <a href="#">Faculties</a>
+          <a href="#">Academic Guidelines</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#" class="nav-link">Admissions
+          <svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="#">Undergraduate</a>
+          <a href="#">Postgraduate</a>
+          <a href="#">Requirements</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center Logo -->
+    <div class="nav-center">
+  <a href="#" class="logo-wrap">
+    <img src="assets/BUP.png" alt="BUP Logo" class="logo-emblem">
+    <span class="logo-text">Bangladesh University of Professionals</span>
+  </a>
+</div>
+
+    <!-- Right -->
+    <div class="nav-right">
+      <div class="nav-item">
+        <a href="#" class="nav-link">Research</a>
+      </div>
+      <div class="nav-item">
+        <a href="#notices" class="nav-link emphasized">Notices</a>
+      </div>
+      <div class="nav-item">
+        <a href="#events" class="nav-link emphasized">Events</a>
+      </div>
+      <button class="nav-search-btn" id="search-toggle" aria-label="Search">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+      </button>
+      <a href="#" class="btn-login">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Student Login (UCAM)
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu">
+  <div class="mobile-nav-item">
+    <a class="mobile-nav-link" href="#">About</a>
+  </div>
+  <div class="mobile-nav-item">
+    <a class="mobile-nav-link" href="#" onclick="toggleSub('sub-academics',event)">Academics ▾</a>
+    <div class="mobile-sub" id="sub-academics">
+      <a href="#">Programs</a>
+      <a href="#">Faculties</a>
+      <a href="#">Academic Guidelines</a>
+    </div>
+  </div>
+  <div class="mobile-nav-item">
+    <a class="mobile-nav-link" href="#" onclick="toggleSub('sub-admissions',event)">Admissions ▾</a>
+    <div class="mobile-sub" id="sub-admissions">
+      <a href="#">Undergraduate</a>
+      <a href="#">Postgraduate</a>
+      <a href="#">Requirements</a>
+    </div>
+  </div>
+  <div class="mobile-nav-item">
+    <a class="mobile-nav-link" href="#">Research</a>
+  </div>
+  <div class="mobile-nav-item">
+    <a class="mobile-nav-link" href="#notices" style="color:var(--red);font-weight:700">Notices</a>
+  </div>
+  <div class="mobile-nav-item">
+    <a class="mobile-nav-link" href="#events" style="color:var(--red);font-weight:700">Events</a>
+  </div>
+  <a href="#" class="mobile-login">Student Login (UCAM)</a>
+</div>
+
+<!-- SEARCH OVERLAY -->
+<div id="search-overlay">
+  <button class="search-close" id="search-close">✕</button>
+  <div class="search-box">
+    <h3>Search BUP</h3>
+    <div class="search-input-wrap">
+      <input type="text" placeholder="Search programs, notices, faculty..." id="search-input">
+      <button>Search</button>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg" id="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Established 2008 — Mirpur Cantonment, Dhaka</div>
+    <h1 class="hero-title">Excellence <em>Through</em> Knowledge</h1>
+    <p class="hero-sub">Bangladesh University of Professionals is the nation's premier defence-affiliated university, committed to academic excellence, research, and national development.</p>
+    <div class="hero-actions">
+      <a href="#" class="btn-primary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Explore Programs
+      </a>
+      <a href="#" class="btn-outline-white">
+        Apply Now →
+      </a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">12K+</div>
+      <div class="stat-label">Students</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">45+</div>
+      <div class="stat-label">Programs</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">6</div>
+      <div class="stat-label">Faculties</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">17</div>
+      <div class="stat-label">Years</div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK ACCESS -->
+<div id="quick-access">
+  <div class="quick-grid">
+    <a class="quick-card" href="#">
+      <svg class="quick-icon" viewBox="0 0 40 40" fill="none" stroke="white" stroke-width="1.8">
+        <rect x="8" y="6" width="24" height="28" rx="2" fill="rgba(255,255,255,0.12)"/>
+        <line x1="13" y1="14" x2="27" y2="14"/><line x1="13" y1="19" x2="27" y2="19"/>
+        <line x1="13" y1="24" x2="20" y2="24"/>
+      </svg>
+      <span class="quick-label">Programs</span>
+    </a>
+    <a class="quick-card" href="#">
+      <svg class="quick-icon" viewBox="0 0 40 40" fill="none" stroke="white" stroke-width="1.8">
+        <path d="M20 8 L32 14 V22 Q32 32 20 36 Q8 32 8 22 V14 Z" fill="rgba(255,255,255,0.12)"/>
+        <path d="M15 22 L19 26 L25 18"/>
+      </svg>
+      <span class="quick-label">Admissions</span>
+    </a>
+    <a class="quick-card" href="#notices">
+      <svg class="quick-icon" viewBox="0 0 40 40" fill="none" stroke="white" stroke-width="1.8">
+        <circle cx="20" cy="20" r="12" fill="rgba(255,255,255,0.12)"/>
+        <line x1="20" y1="14" x2="20" y2="21"/><circle cx="20" cy="25" r="1.2" fill="white"/>
+      </svg>
+      <span class="quick-label">Notices</span>
+    </a>
+    <a class="quick-card" href="#events">
+      <svg class="quick-icon" viewBox="0 0 40 40" fill="none" stroke="white" stroke-width="1.8">
+        <rect x="8" y="11" width="24" height="21" rx="2" fill="rgba(255,255,255,0.12)"/>
+        <line x1="8" y1="17" x2="32" y2="17"/>
+        <line x1="15" y1="7" x2="15" y2="13"/><line x1="25" y1="7" x2="25" y2="13"/>
+        <rect x="14" y="21" width="5" height="5" rx="1" fill="rgba(255,255,255,0.4)"/>
+      </svg>
+      <span class="quick-label">Events</span>
+    </a>
+    <a class="quick-card" href="#research">
+      <svg class="quick-icon" viewBox="0 0 40 40" fill="none" stroke="white" stroke-width="1.8">
+        <circle cx="18" cy="18" r="8" fill="rgba(255,255,255,0.12)"/>
+        <path d="M24 24 L32 32"/>
+        <line x1="14" y1="18" x2="22" y2="18"/><line x1="18" y1="14" x2="18" y2="22"/>
+      </svg>
+      <span class="quick-label">Research</span>
+    </a>
+    <a class="quick-card" href="#">
+      <svg class="quick-icon" viewBox="0 0 40 40" fill="none" stroke="white" stroke-width="1.8">
+        <circle cx="20" cy="15" r="7" fill="rgba(255,255,255,0.12)"/>
+        <path d="M8 34 Q8 26 20 26 Q32 26 32 34"/>
+        <path d="M27 19 L35 26"/>
+      </svg>
+      <span class="quick-label">Student Portal</span>
+    </a>
+  </div>
+</div>
+
+<!-- NOTICES -->
+<section id="notices">
+  <div class="container">
+    <div class="section-header-row">
+      <div class="section-header" style="margin-bottom:0">
+        <div class="section-label">Announcements</div>
+        <h2 class="section-title">Notices &amp; Circulars</h2>
+      </div>
+      <a href="#" class="btn-text">View All Notices <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </div>
+
+    <div class="notice-filters">
+      <button class="filter-btn active" onclick="filterNotices('all',this)">All</button>
+      <button class="filter-btn" onclick="filterNotices('exam',this)">Exam</button>
+      <button class="filter-btn" onclick="filterNotices('admission',this)">Admission</button>
+      <button class="filter-btn" onclick="filterNotices('seminar',this)">Seminar</button>
+      <button class="filter-btn" onclick="filterNotices('result',this)">Result</button>
+      <button class="filter-btn" onclick="filterNotices('general',this)">General</button>
+    </div>
+
+    <div class="notice-list" id="notice-list">
+      <a href="#" class="notice-item" data-cat="exam">
+        <div class="notice-date-block"><div class="notice-day">28</div><div class="notice-month">Mar</div></div>
+        <div class="notice-divider"></div>
+        <div class="notice-body">
+          <span class="notice-tag tag-exam">Exam</span>
+          <div class="notice-title">Spring Semester 2025 Final Examination Schedule — All Departments</div>
+        </div>
+        <svg class="notice-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+      <a href="#" class="notice-item" data-cat="admission">
+        <div class="notice-date-block"><div class="notice-day">25</div><div class="notice-month">Mar</div></div>
+        <div class="notice-divider"></div>
+        <div class="notice-body">
+          <span class="notice-tag tag-admission">Admission</span>
+          <div class="notice-title">MBA Evening Program 2025: Application Window Now Open for Civilian Candidates</div>
+        </div>
+        <svg class="notice-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+      <a href="#" class="notice-item" data-cat="seminar">
+        <div class="notice-date-block"><div class="notice-day">22</div><div class="notice-month">Mar</div></div>
+        <div class="notice-divider"></div>
+        <div class="notice-body">
+          <span class="notice-tag tag-seminar">Seminar</span>
+          <div class="notice-title">International Seminar on Cybersecurity and National Defence — Registration Open</div>
+        </div>
+        <svg class="notice-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+      <a href="#" class="notice-item" data-cat="result">
+        <div class="notice-date-block"><div class="notice-day">18</div><div class="notice-month">Mar</div></div>
+        <div class="notice-divider"></div>
+        <div class="notice-body">
+          <span class="notice-tag tag-result">Result</span>
+          <div class="notice-title">Fall Semester 2024 Results Published — Check UCAM Portal for Grade Sheets</div>
+        </div>
+        <svg class="notice-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+      <a href="#" class="notice-item" data-cat="general">
+        <div class="notice-date-block"><div class="notice-day">15</div><div class="notice-month">Mar</div></div>
+        <div class="notice-divider"></div>
+        <div class="notice-body">
+          <span class="notice-tag tag-general">General</span>
+          <div class="notice-title">Library Extended Hours Effective April 1, 2025 During Examination Period</div>
+        </div>
+        <svg class="notice-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+    </div>
+
+    <div class="notices-footer">
+      <a href="#" class="btn-outline-red">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        View All Notices
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <div class="container">
+    <div class="section-header-row">
+      <div class="section-header" style="margin-bottom:0">
+        <div class="section-label">What's On</div>
+        <h2 class="section-title">Upcoming Events</h2>
+      </div>
+      <a href="#" class="btn-text">All Events <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </div>
+
+    <div class="events-grid">
+      <div class="event-card">
+        <div class="event-img-placeholder" style="background:linear-gradient(135deg,#8B1A1A,#C9A84C)">🎓</div>
+        <div class="event-body">
+          <div class="event-date">📅 April 15, 2025 · 9:00 AM</div>
+          <div class="event-title">International Conference on Digital Transformation & National Security</div>
+          <div class="event-desc">Leading scholars, policymakers and industry experts converge at BUP to explore the intersection of technology and national security.</div>
+          <div class="event-actions">
+            <a href="#" class="btn-sm-red">View Details</a>
+            <a href="#" class="btn-sm-fb">f Facebook</a>
+          </div>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-img-placeholder" style="background:linear-gradient(135deg,#1a4b8b,#4a7fc1)">🏆</div>
+        <div class="event-body">
+          <div class="event-date">📅 April 20, 2025 · 10:00 AM</div>
+          <div class="event-title">BUP Annual Research Symposium 2025</div>
+          <div class="event-desc">Graduate students and faculty present groundbreaking research across science, business, and social studies disciplines.</div>
+          <div class="event-actions">
+            <a href="#" class="btn-sm-red">View Details</a>
+            <a href="#" class="btn-sm-fb">f Facebook</a>
+          </div>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-img-placeholder" style="background:linear-gradient(135deg,#1a6b2b,#4a9c5c)">🎤</div>
+        <div class="event-body">
+          <div class="event-date">📅 April 28, 2025 · 2:00 PM</div>
+          <div class="event-title">National Inter-University Debate Championship — Spring 2025</div>
+          <div class="event-desc">Teams from 30+ universities compete in BUP's flagship debate competition at the Main Auditorium. Open to public.</div>
+          <div class="event-actions">
+            <a href="#" class="btn-sm-red">View Details</a>
+            <a href="#" class="btn-sm-fb">f Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACADEMICS -->
+<section id="academics">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-label">Learn</div>
+      <h2 class="section-title">Academic Excellence Across Disciplines</h2>
+    </div>
+
+    <div class="academics-grid">
+      <div class="academic-card">
+        <div class="academic-icon">⚖️</div>
+        <div class="academic-title">Faculty of Security & Strategic Studies</div>
+        <div class="academic-desc">Cutting-edge programs in national security, strategic policy, and defence management.</div>
+      </div>
+      <div class="academic-card">
+        <div class="academic-icon">📊</div>
+        <div class="academic-title">Faculty of Business Administration</div>
+        <div class="academic-desc">BBA, MBA, and EMBA programs preparing future business leaders through rigorous curricula.</div>
+      </div>
+      <div class="academic-card">
+        <div class="academic-icon">💻</div>
+        <div class="academic-title">Faculty of Science & Technology</div>
+        <div class="academic-desc">ICT, Computer Science, and Engineering programs with hands-on laboratory experience.</div>
+      </div>
+      <div class="academic-card">
+        <div class="academic-icon">🌍</div>
+        <div class="academic-title">Faculty of Arts & Social Sciences</div>
+        <div class="academic-desc">Programs in economics, English, and social sciences fostering critical thinking and inquiry.</div>
+      </div>
+    </div>
+    <div style="text-align:center">
+      <a href="#" class="btn-outline-red">View All Programs</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="container">
+    <div class="section-header-row">
+      <div class="section-header" style="margin-bottom:0">
+        <div class="section-label">Discovery</div>
+        <h2 class="section-title">Research &amp; Innovation</h2>
+      </div>
+      <a href="#" class="btn-text">All Research <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </div>
+    <div class="research-grid">
+      <div class="research-card featured">
+        <div style="height:260px;background:linear-gradient(135deg,#2c1810,#8B1A1A);display:flex;align-items:center;justify-content:center;font-size:4rem">🔬</div>
+        <div class="research-body">
+          <div class="research-tag">Featured Research</div>
+          <div class="research-title">Artificial Intelligence Applications in Counter-Terrorism and Border Security Operations</div>
+          <div class="research-meta">Dr. Mehedi Hasan · Security Studies · Published Feb 2025</div>
+        </div>
+      </div>
+      <div class="research-card">
+        <div style="height:160px;background:linear-gradient(135deg,#1a3a6b,#3a6cb5);display:flex;align-items:center;justify-content:center;font-size:2.5rem">📡</div>
+        <div class="research-body">
+          <div class="research-tag">ICT Research</div>
+          <div class="research-title">5G Network Security Vulnerabilities in Critical Infrastructure</div>
+          <div class="research-meta">Prof. Rashida Khanam · Mar 2025</div>
+        </div>
+      </div>
+      <div class="research-card">
+        <div style="height:160px;background:linear-gradient(135deg,#1a5c2b,#3a9c5c);display:flex;align-items:center;justify-content:center;font-size:2.5rem">🌱</div>
+        <div class="research-body">
+          <div class="research-tag">Economic Study</div>
+          <div class="research-title">Climate Resilience and Blue Economy Development in Bangladesh</div>
+          <div class="research-meta">Dr. Farida Yesmin · Jan 2025</div>
+        </div>
+      </div>
+      <div class="research-card">
+        <div style="height:160px;background:linear-gradient(135deg,#5c1a3a,#b53a6c);display:flex;align-items:center;justify-content:center;font-size:2.5rem">🧠</div>
+        <div class="research-body">
+          <div class="research-tag">Behavioral Science</div>
+          <div class="research-title">Leadership Psychology in High-Stress Military Environments</div>
+          <div class="research-meta">Col. (Retd.) Iftekhar · Dec 2024</div>
+        </div>
+      </div>
+      <div class="research-card">
+        <div style="height:160px;background:linear-gradient(135deg,#4a3a1a,#9a7a3a);display:flex;align-items:center;justify-content:center;font-size:2.5rem">📜</div>
+        <div class="research-body">
+          <div class="research-tag">Policy Paper</div>
+          <div class="research-title">Post-Conflict Reconstruction and Democratic Governance Frameworks</div>
+          <div class="research-meta">Dr. Nusrat Islam · Nov 2024</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAMPUS -->
+<section id="campus">
+  <div class="container">
+    <div class="section-header-row">
+      <div>
+        <div class="section-label">Our Home</div>
+        <h2 class="section-title" style="color:white">Life at BUP Campus</h2>
+      </div>
+      <a href="#" class="btn-outline-white" style="border-color:rgba(255,255,255,0.4)">Explore Campus</a>
+    </div>
+    <div class="campus-grid">
+      <div class="campus-cell" style="grid-column:span 2">
+        <div class="campus-placeholder" style="background:linear-gradient(135deg,#3a3530,#5a5248);height:200px">🏛️ <span style="font-size:1rem;margin-left:1rem;color:rgba(255,255,255,0.5)">Administrative Building</span></div>
+      </div>
+      <div class="campus-cell">
+        <div class="campus-placeholder" style="background:linear-gradient(135deg,#2a3540,#4a6070);height:200px">📚</div>
+      </div>
+      <div class="campus-cell" style="grid-row:span 2">
+        <div class="campus-placeholder" style="background:linear-gradient(135deg,#3a2a30,#6a4a50);height:408px">🏟️</div>
+      </div>
+      <div class="campus-cell">
+        <div class="campus-placeholder" style="background:linear-gradient(135deg,#2a3a2a,#4a6a4a);height:200px">🌿</div>
+      </div>
+      <div class="campus-cell">
+        <div class="campus-placeholder" style="background:linear-gradient(135deg,#3a3a2a,#6a6a4a);height:200px">🔬</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-text">Bangladesh University of Professionals</div>
+        <div class="footer-logo-sub">BUP — Est. 2008</div>
+        <p class="footer-desc">Committed to academic excellence, research innovation, and the development of ethical, capable leaders for Bangladesh and beyond.</p>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Mirpur Cantonment, Dhaka-1216, Bangladesh</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l1.27-.85a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.18v-.26"/></svg>
+          <span>+880-2-8000000</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>info@bup.edu.bd</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="#">About BUP</a></li>
+          <li><a href="#">Vice Chancellor's Message</a></li>
+          <li><a href="#">Academic Calendar</a></li>
+          <li><a href="#">Library</a></li>
+          <li><a href="#">Career Services</a></li>
+          <li><a href="#">Alumni Network</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Academics</h5>
+        <ul class="footer-links">
+          <li><a href="#">Undergraduate Programs</a></li>
+          <li><a href="#">Graduate Programs</a></li>
+          <li><a href="#">Research Centers</a></li>
+          <li><a href="#">Faculties</a></li>
+          <li><a href="#">Academic Guidelines</a></li>
+          <li><a href="#">Examinations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h5>Stay Connected</h5>
+        <p>Subscribe to receive updates on notices, events, and academic news directly in your inbox.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="your@email.com">
+          <button>Subscribe</button>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link" title="Facebook">f</a>
+          <a href="#" class="social-link" title="Twitter">𝕏</a>
+          <a href="#" class="social-link" title="YouTube">▶</a>
+          <a href="#" class="social-link" title="LinkedIn">in</a>
+          <a href="#" class="social-link" title="Instagram">◎</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Bangladesh University of Professionals. All rights reserved.</p>
+      <p style="display:flex;gap:1.5rem">
+        <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:none;font-size:12px">Privacy Policy</a>
+        <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:none;font-size:12px">Terms of Use</a>
+        <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:none;font-size:12px">Sitemap</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- CHATBOT -->
+<button id="chatbot-btn" onclick="toggleChat()" title="Ask BUP Assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    <circle cx="9" cy="10" r="1" fill="currentColor"/><circle cx="12" cy="10" r="1" fill="currentColor"/><circle cx="15" cy="10" r="1" fill="currentColor"/>
+  </svg>
+</button>
+<div id="chatbot-tooltip">Ask BUP Assistant 🎓</div>
+
+<div id="chatbot-panel">
+  <div class="chat-header">
+    <div class="chat-header-icon">🎓</div>
+    <div class="chat-header-info">
+      <h4>BUP Assistant</h4>
+      <p>Admissions · Notices · Academics</p>
+    </div>
+    <button class="chat-close" onclick="toggleChat()">✕</button>
+  </div>
+  <div class="chat-messages" id="chat-messages">
+    <div class="chat-bubble bot">👋 Hello! I'm the BUP Assistant. Ask me about admissions, programs, notices, or academic guidelines.</div>
+  </div>
+  <div class="chat-quick-btns">
+    <button class="chat-quick-btn" onclick="sendQuick('How do I apply for MBA?')">MBA Admissions</button>
+    <button class="chat-quick-btn" onclick="sendQuick('What programs are available?')">Programs</button>
+    <button class="chat-quick-btn" onclick="sendQuick('Latest exam schedule?')">Exam Schedule</button>
+  </div>
+  <div class="chat-input-wrap">
+    <input type="text" id="chat-input" placeholder="Type your question..." onkeydown="if(event.key==='Enter')sendChat()">
+    <button class="chat-send" onclick="sendChat()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  // Navbar scroll behavior
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 10);
+  });
+
+  // Search overlay
+  const searchOverlay = document.getElementById('search-overlay');
+  document.getElementById('search-toggle').addEventListener('click', () => {
+    searchOverlay.classList.add('open');
+    setTimeout(() => document.getElementById('search-input').focus(), 300);
+  });
+  document.getElementById('search-close').addEventListener('click', () => searchOverlay.classList.remove('open'));
+  searchOverlay.addEventListener('click', (e) => { if(e.target === searchOverlay) searchOverlay.classList.remove('open'); });
+
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+
+  function toggleSub(id, e) {
+    e.preventDefault();
+    document.getElementById(id).classList.toggle('open');
+  }
+
+  // Notice filters
+  function filterNotices(cat, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.notice-item').forEach(item => {
+      item.style.display = (cat === 'all' || item.dataset.cat === cat) ? 'flex' : 'none';
+    });
+  }
+
+  // Chatbot
+  let chatOpen = false;
+  function toggleChat() {
+    chatOpen = !chatOpen;
+    document.getElementById('chatbot-panel').classList.toggle('open', chatOpen);
+  }
+
+  const chatResponses = {
+    'mba': 'MBA admission is open for the Spring 2025 session. You need a bachelor\'s degree with min. CGPA 2.50. Apply at bup.edu.bd/admissions.',
+    'program': 'BUP offers 40+ programs across 6 faculties: Business, Security Studies, Science & Tech, Arts & Social Sciences, Law, and more.',
+    'exam': 'The Spring 2025 Final Exam schedule has been published. Visit Notices > Exam or check the UCAM portal.',
+    'default': 'Thank you for your question! For detailed information, please visit our website or call +880-2-8000000.'
+  };
+
+  function sendQuick(msg) { document.getElementById('chat-input').value = msg; sendChat(); }
+
+  function sendChat() {
+    const inp = document.getElementById('chat-input');
+    const msg = inp.value.trim();
+    if(!msg) return;
+    const msgs = document.getElementById('chat-messages');
+    msgs.innerHTML += `<div class="chat-bubble user">${msg}</div>`;
+    inp.value = '';
+    setTimeout(() => {
+      const lower = msg.toLowerCase();
+      let reply = chatResponses.default;
+      if(lower.includes('mba') || lower.includes('admiss')) reply = chatResponses.mba;
+      else if(lower.includes('program') || lower.includes('course') || lower.includes('faculty')) reply = chatResponses.program;
+      else if(lower.includes('exam') || lower.includes('schedule')) reply = chatResponses.exam;
+      msgs.innerHTML += `<div class="chat-bubble bot">${reply}</div>`;
+      msgs.scrollTop = msgs.scrollHeight;
+    }, 600);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+
+  // Subtle parallax on hero
+  window.addEventListener('scroll', () => {
+    const bg = document.getElementById('hero-bg');
+    if(bg) bg.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+  });
+
+  // Intersection observer for fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.event-card, .academic-card, .research-card, .notice-item').forEach(el => {
+    el.style.cssText += 'opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease,box-shadow 0.25s;';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
